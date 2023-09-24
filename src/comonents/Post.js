@@ -130,7 +130,7 @@ const Post = () => {
                           <tr>
                             <td>{(currentPage - 1) * recordsPerPage + index + 1}</td>
                             <td>
-                              <img src={`http://localhost:5000/public/images/${item.pImage}`} style={{ width: "4rem" }} />
+                              <img src={`${process.env.REACT_APP_BASE_URL}/public/images/${item.pImage}`} style={{ width: "4rem" }} />
                             </td>
                             <td>{item.pName}</td>
                             <td>{item.pPrice}</td>

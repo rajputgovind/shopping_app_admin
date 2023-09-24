@@ -47,7 +47,7 @@ const Home = () => {
 
   const fetchUser = async() =>{
     try {
-      const resp = await axios.get(`http://localhost:5000/users`)
+      const resp = await axios.get(`${process.env.REACT_APP_BASE_URL}/users`)
       // console.log("userrrrrrrrr", resp.data)
       setUserData(resp.data)
     } catch (error) {
@@ -155,7 +155,7 @@ const Home = () => {
                           <tr>
                             <td>{index+1}</td>
                             <td>
-                              <img src={`http://localhost:5000/public/images/${item.pImage}`} style={{width:"4rem"}}/>
+                              <img src={`${process.env.REACT_APP_BASE_URL}/public/images/${item.pImage}`} style={{width:"4rem"}}/>
                             </td>
                             <td>{item.pName}</td>
                             <td>{item.pPrice}</td>
